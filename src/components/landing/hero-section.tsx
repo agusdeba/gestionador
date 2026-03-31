@@ -11,6 +11,13 @@ export function HeroSection() {
       featuresSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
   };
+  const handleScrollToContact = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+    const contactSection = document.getElementById('contacto');
+    if (contactSection) {
+      contactSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  };
 
   return (
     <section className="relative pt-32 pb-24 px-6 overflow-hidden">
@@ -29,13 +36,15 @@ export function HeroSection() {
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Link
-              href="/login"
-              className="group px-8 py-4 bg-[var(--brand-indigo)] hover:bg-[var(--brand-indigo)]/90 text-white rounded-lg transition-all flex items-center gap-2 text-lg shadow-lg shadow-[var(--brand-indigo)]/20 font-medium"
+            <a
+              href="#contacto"
+              onClick={handleScrollToContact}
+              className="group px-8 py-4 bg-[var(--brand-indigo)] hover:bg-[var(--brand-indigo)]/90 text-white rounded-lg transition-all flex items-center gap-2 text-lg shadow-lg shadow-[var(--brand-indigo)]/20 font-medium cursor-pointer"
             >
-              Iniciar Sesión
+              Solicitar Demo
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-            </Link>
+            </a>
+            
             <a
               href="#caracteristicas"
               onClick={handleScrollToFeatures}
