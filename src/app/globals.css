@@ -81,6 +81,14 @@
   --sidebar-accent-foreground: oklch(0.205 0 0);
   --sidebar-border: oklch(0.922 0 0);
   --sidebar-ring: oklch(0.708 0 0);
+  --success-green: #10b981;
+  --success-green-light: #d1fae5;
+  --debt-red: #f43f5e;
+  --debt-red-light: #ffe4e6;
+  --warning-amber: #f59e0b;
+  --warning-amber-light: #fef3c7;
+  --brand-indigo: #4f46e5;
+  --brand-indigo-light: #e0e7ff;
 }
 
 .dark {
