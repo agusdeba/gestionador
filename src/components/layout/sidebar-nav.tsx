@@ -7,9 +7,11 @@ import {
   Settings,
   TrendingUp,
   Users,
+  LogOut,
 } from "lucide-react";
-
 import { cn } from "@/lib/utils";
+import { cerrarSesion } from "@/modules/auth/actions";
+import { Button } from "@/components/ui/button";
 
 const items = [
   { href: "/panel", label: "Dashboard", icon: LayoutDashboard },
@@ -45,6 +47,20 @@ export function SidebarNav() {
           </Link>
         );
       })}
+
+      <div className="mt-auto pt-4 border-t border-border">
+        <form action={cerrarSesion}>
+          <Button
+            type="submit"
+            variant="ghost"
+            className="w-full justify-start text-sidebar-foreground/80 hover:text-red-600 hover:bg-red-100/50 dark:hover:bg-red-900/20 transition-colors"
+          >
+            <LogOut className="mr-2 h-4 w-4" aria-hidden />
+            Cerrar Sesión
+          </Button>
+        </form>
+      </div>
+      
     </nav>
   );
 }

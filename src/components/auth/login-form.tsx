@@ -4,7 +4,6 @@ import { useActionState } from "react";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
-
 import { loginAction, type LoginState } from "@/modules/auth/actions";
 import { Button } from "@/components/ui/button";
 import {
@@ -23,6 +22,8 @@ import {
   FormMessage,
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
+import { startTransition } from "react";
+
 
 const formSchema = z.object({
   email: z.string().email("Introduce un email válido."),
@@ -62,7 +63,9 @@ export function LoginForm() {
               const fd = new FormData();
               fd.set("email", values.email);
               fd.set("password", values.password);
-              formAction(fd);
+              startTransition(() => {
+                formAction(fd);
+              });
             })}
             className="space-y-4"
           >

@@ -39,8 +39,17 @@ export async function loginAction(
   });
 
   if (error) {
-    return { error: error.message };
+    if (error.message === "Invalid login credentials") {
+      return { error: "El correo o la contraseña son incorrectos." };
+    }
+    return { error: "Ocurrió un error al intentar iniciar sesión." };
   }
 
   redirect("/panel");
+}
+
+export async function cerrarSesion() {
+  const supabase = await createClient();  
+  await supabase.auth.signOut();
+  redirect("/");
 }
