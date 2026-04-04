@@ -1,8 +1,8 @@
 import { Suspense } from "react";
 import { Loader2 } from "lucide-react";
-import { DashboardHeader } from "@/components/dashboard/dashboard-header";
-import { KpiCards } from "@/components/dashboard/kpi-cards";
-import { DashboardCharts } from "@/components/dashboard/dashboard-charts";
+import { DashboardHeader } from "@/modules/dashboard/dashboard-header";
+import { KpiCards } from "@/modules/dashboard/kpi-cards";
+import { DashboardCharts } from "@/modules/dashboard/dashboard-charts";
 
 function KpiLoadingFallback() {
   return (

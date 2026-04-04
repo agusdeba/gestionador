@@ -7,11 +7,8 @@ import {
   Settings,
   TrendingUp,
   Users,
-  LogOut,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
-import { cerrarSesion } from "@/modules/auth/actions";
-import { Button } from "@/components/ui/button";
 
 const items = [
   { href: "/panel", label: "Panel de Control", icon: LayoutDashboard },

@@ -1,5 +1,5 @@
 import { SidebarNav } from "@/components/layout/sidebar-nav";
-import { LogoutButton } from "@/components/auth/logout-button";
+import { LogoutButton } from "@/modules/auth/logout-button";
 
 type DashboardLayoutProps = {
   children: React.ReactNode;

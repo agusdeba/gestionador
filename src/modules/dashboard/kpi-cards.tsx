@@ -1,5 +1,5 @@
 import { TrendingUp, TrendingDown, Receipt, CalendarClock } from "lucide-react";
-import { getDashboardKPIs } from "@/components/dashboard/queries";
+import { getDashboardKPIs } from "@/modules/dashboard/queries";
 
 export async function KpiCards() {
   // Llamamos a nuestra función de base de datos
